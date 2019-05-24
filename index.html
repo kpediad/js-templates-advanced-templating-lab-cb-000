@@ -19,7 +19,7 @@
     <script src="test/index-test.js"></script>
 
     <script id="recipe-form-template" type="text/x-handlebars-template">
-      <form onsubmit="handleSubmit()" id="recipe-form">
+      <form onsubmit="handleSubmit();return false;" id="recipe-form">
         Name: <input type="text" name="name" value="{{name}}" id="name"><br>
         Description: <input type="text" name="description" value="{{description}}" id="description"><br>
         {{#each ingredients}}
