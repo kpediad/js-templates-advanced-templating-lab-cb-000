@@ -6,8 +6,8 @@ function init() {
   Handlebars.registerPartial('recipeDetailsPartial', '{{description}}');
   Handlebars.registerPartial('recipeDetailsPartial', '{{ingredients}}');
   let template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  let name = '';
-  let description = '';
+  let name = 'TEST';
+  let description = 'Skata';
   let ingredients = [{value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}];
   let result = template(name, description, ingredients);
   document.getElementsByTagName("main")[0].innerHTML += result;
