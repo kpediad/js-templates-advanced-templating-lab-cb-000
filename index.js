@@ -3,8 +3,7 @@ function init() {
   Handlebars.registerHelper('displayIngredient', function(ing) {
       return new Handlebars.SafeString("<li name=\"ingredients\">" + ing + "</li>")
   })
-  Handlebars.registerPartial('recipeDetailsPartial', '{{description}}');
-  Handlebars.registerPartial('recipeDetailsPartial', '{{ingredients}}');
+  Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
   let template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   let name = '';
   let description = '';
