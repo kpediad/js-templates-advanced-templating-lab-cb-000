@@ -14,7 +14,6 @@ function init() {
 }
 
 function handleSubmit() {
-  e.preventDefault();
   let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   let name = document.getElementsByName('name')[0].value;
   let description = document.getElementsByName('description')[0].value;
