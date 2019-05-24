@@ -7,7 +7,7 @@ function init() {
   let template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   let name = '';
   let description = '';
-  let ingredients = [{value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}];
+  let ingredients = ['', '', '', '', ''];
   let result = template({name: name, description: description, ingredients: ingredients});
   document.getElementsByTagName("main")[0].innerHTML += result;
 }
