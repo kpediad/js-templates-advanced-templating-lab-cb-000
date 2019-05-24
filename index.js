@@ -14,12 +14,12 @@ function init() {
 }
 
 function handleSubmit() {
-  event.preventDefault();
+  e.preventDefault();
   let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   let name = document.getElementsByName('name')[0].value;
   let description = document.getElementsByName('description')[0].value;
   let ingredients = document.getElementsByName('ingredients');
-  let result = template(name, description, ingredients);
+  let result = template({name: name, description: description, ingredients: ingredients});
   document.getElementsByTagName("main")[0].innerHTML = result;
 }
 
