@@ -117,7 +117,9 @@ describe('Handlebars Templates Lab', function() {
         spy.reset()
         // the form should be pre-filled with previous values
         ingredients = document.getElementsByName("ingredients")
-        console.log(ingredients);
+        ingredients.forEach(function (ing, index) {
+          console.log(index, ing.value);
+        });
         nameField = document.getElementById("name")
         descriptionField = document.getElementById("description")
         expect(nameField.value).toEqual("Fruit Salad", "Got: '" + nameField.value + "' Expected 'Fruit Salad' Make sure that the name field is pre-filled in the edit form")
