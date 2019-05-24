@@ -9,7 +9,7 @@ function init() {
   let name = 'TEST';
   let description = 'Skata';
   let ingredients = [{value: '123'}, {value: '456'}, {value: '789'}, {value: ''}, {value: ''}];
-  let result = template(name, description, ingredients);
+  let result = template({name: name}, description, ingredients);
   document.getElementsByTagName("main")[0].innerHTML += result;
 }
 
