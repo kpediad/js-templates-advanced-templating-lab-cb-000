@@ -8,7 +8,7 @@ function init() {
   let template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   let name = 'TEST';
   let description = 'Skata';
-  let ingredients = [{value: ''}, {value: ''}, {value: ''}, {value: ''}, {value: ''}];
+  let ingredients = [{value: '123'}, {value: '456'}, {value: '789'}, {value: ''}, {value: ''}];
   let result = template(name, description, ingredients);
   document.getElementsByTagName("main")[0].innerHTML += result;
 }
