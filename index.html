@@ -23,7 +23,7 @@
         Name: <input type="text" name="name" value="{{name}}" id="name"><br>
         Description: <input type="text" name="description" value="{{description}}" id="description"><br>
         {{#each ingredients}}
-          Ingredient {{@index + 1}}: <input type="text" name="ingredients" value="{{this.value}}" id="ingredient[{{@index}}]"><br>
+          Ingredient {{@index}}: <input type="text" name="ingredients" value="{{this.value}}" id="ingredient[{{@index}}]"><br>
         {{/each}}
       </form>
     </script>
