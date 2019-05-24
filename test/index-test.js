@@ -117,7 +117,7 @@ describe('Handlebars Templates Lab', function() {
         spy.reset()
         // the form should be pre-filled with previous values
         ingredients = document.getElementsByName("ingredients")
-        ingredients.forEach(function (ing, index) {
+        [...ingredients].forEach(function (ing, index) {
           console.log(index, ing.value);
         });
         nameField = document.getElementById("name")
