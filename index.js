@@ -28,7 +28,7 @@ function displayEditForm() {
   let name = document.getElementsById('name')[0].value;
   let description = document.getElementsById('description')[0].value;
   let ingredients = document.getElementsByName('ingredients');
-  let result = template(name, description, ingredients);
+  let result = template({name: name, description: description, ingredients: ingredients});
   document.getElementsByTagName("main")[0].innerHTML = result;
 }
 document.addEventListener("DOMContentLoaded", function(event) {
