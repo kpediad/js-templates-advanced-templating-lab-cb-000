@@ -1,7 +1,7 @@
 function init() {
   //put any page initialization/handlebars initialization here
-  Handlebars.registerHelper('displayIngredient', function() {
-      return new Handlebars.SafeString("<li name=\"ingredients\">" + this.value + "</li>")
+  Handlebars.registerHelper('displayIngredient', function(ing) {
+      return new Handlebars.SafeString("<li name=\"ingredients\">" + ing + "</li>")
   })
   Handlebars.registerPartial('recipeDetailsPartial', '{{description}}');
   Handlebars.registerPartial('recipeDetailsPartial', '{{ingredients}}');
