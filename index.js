@@ -14,8 +14,8 @@ function init() {
 
 function handleSubmit() {
   let template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-  let name = document.getElementsById('name').value;
-  let description = document.getElementsById('description').value;
+  let name = document.getElementById('name').value;
+  let description = document.getElementById('description').value;
   let ingredients = [...document.getElementsByName('ingredients')].map(el => el.value);
   let result = template({name: name, description: description, ingredients: ingredients});
   document.getElementsByTagName("main")[0].innerHTML = result;
